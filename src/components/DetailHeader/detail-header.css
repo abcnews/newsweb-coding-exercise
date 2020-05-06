@@ -1,0 +1,14 @@
+.Detail-Header {
+	margin-left: -1rem;
+	padding: 0;
+}
+
+.Detail-Header-image {
+	width: 100%;
+	height: auto;
+}
+
+.Detail-Header-heading {
+	margin-top: 0;
+	font-size: 2rem;
+}

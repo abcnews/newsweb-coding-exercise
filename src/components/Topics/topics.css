@@ -1,0 +1,12 @@
+
+.topics-container {
+	margin: 1rem 0;
+}
+
+.topics-container strong {
+	color: #0058cc;
+	border: 1px solid #ccc;
+	padding: .25rem;
+	margin-right: .5rem;
+	font-size: .8rem;
+}

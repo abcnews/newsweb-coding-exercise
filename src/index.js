@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import App from './pages/App';
+import Web from './pages/Web';
+
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+const SwitchBetweenWebAndApp = () => {
+	const [showWeb, setShowWeb] = useState(true);
+
+	return (
+		<>
+			<div className="app-switcher">
+				<button onClick={e => setShowWeb(!showWeb)}>Switch between Web and App</button>
+			</div>
+			<div>
+			{showWeb ? <Web /> : <App />}
+			</div>
+		</>
+	)
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<SwitchBetweenWebAndApp />,
+	document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
